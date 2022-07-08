@@ -1,9 +1,18 @@
 package com.ipvc.springjbdc.entity;
 
 public class Users {
+    private int id;
     private String full_name;
     private String email;
     private String password;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getFull_name() {
         return full_name;
@@ -32,7 +41,8 @@ public class Users {
     @Override
     public String toString() {
         return "Users{" +
-                "full_name='" + full_name + '\'' +
+                "id=" + id +
+                ", full_name='" + full_name + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 '}';

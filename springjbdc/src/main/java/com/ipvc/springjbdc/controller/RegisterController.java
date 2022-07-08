@@ -1,7 +1,6 @@
 package com.ipvc.springjbdc.controller;
 
-import java.sql.*;
-
+import com.ipvc.springjbdc.util.DBUTIL;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -9,6 +8,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Window;
+import java.sql.Connection;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
 
 public class RegisterController {
 
@@ -23,6 +29,10 @@ public class RegisterController {
 
     @FXML
     private Button submitButton;
+
+    PreparedStatement pstmt = null;
+    Connection con=null;
+    ResultSet rs = null;
 
     @FXML
     public void register(ActionEvent event) throws SQLException {
@@ -49,21 +59,24 @@ public class RegisterController {
             return;
         }
 
-        String fullName = fullNameField.getText();
+        String full_name = fullNameField.getText();
         String email = emailIdField.getText();
         String password = passwordField.getText();
 
        try{
-           Class.forName("com.ipvc.springjbdc.entity.Users");
-           Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","manteiga","manteiga");
-           PreparedStatement pst = con.prepareStatement("Select * FROM Users WHERE fullName=? AND email =? AND password=?");
+           con= DBUTIL.getConnection();
+           con.createStatement();
+           String sql = "INSERT INTO USERS (full_name,email,password) VALUES (?,?,?)";
 
-           pst.setString(1,fullName);
-           pst.setString(2,email);
-           pst.setString(3,password);
+           pstmt = con.prepareStatement(sql);
+           pstmt.setString(1,full_name);
+           pstmt.setString(2,email);
+           pstmt.setString(3,password);
 
-           ResultSet rs = pst.executeQuery();
-       } catch (ClassNotFoundException e) {
+           rs = pstmt.executeQuery();
+           System.out.println(rs);
+
+       } catch (SQLException e) {
            e.printStackTrace();
        }
 
