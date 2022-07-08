@@ -35,9 +35,9 @@ public class SpringjbdcApplication implements CommandLineRunner {
 
        armazems.forEach(System.out::println);
   */
-        String mquery = "SELECT * FROM Fatura_FORNECEDOR";
-        List<Fatura_Fornecedor> fatura_fornecedors = jdbcTemplate.query(mquery,
-                BeanPropertyRowMapper.newInstance(Fatura_Fornecedor.class));
-        fatura_fornecedors.forEach(System.out::println);
+        String mquery = "SELECT * FROM Users";
+        List<Users> users = jdbcTemplate.query(mquery,
+                BeanPropertyRowMapper.newInstance(Users.class));
+        users.forEach(System.out::println);
     }
 }
