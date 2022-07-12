@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="500.0">
+         <children>
+            <ImageView fitHeight="139.0" fitWidth="291.0" layoutX="106.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/logo-png.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="185.0" layoutY="117.0" text="Bem vindo, Admin!" textFill="#8a5c3a">
+               <font>
+                  <Font name="Roboto Light" size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="193.0" layoutY="170.0" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Encomendas" textFill="#fcfcfc">
+               <font>
+                  <Font name="Roboto Light" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="206.0" layoutY="215.0" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Armazém" textFill="#fcfcfc">
+               <font>
+                  <Font name="Roboto Light" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="207.0" layoutY="260.0" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Produção" textFill="#fcfcfc">
+               <font>
+                  <Font name="Roboto Light" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="161.0" layoutY="305.0" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Controlo de Qualidade" textFill="#fcfcfc">
+               <font>
+                  <Font name="Roboto Light" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="209.0" layoutY="350.0" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Finanças" textFill="#fcfcfc">
+               <font>
+                  <Font name="Roboto Light" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="176.0" layoutY="395.0" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Registar Utilizador" textFill="#fcfcfc">
+               <font>
+                  <Font name="Roboto Light" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="432.0" layoutY="461.0" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Logout" textFill="#fcfcfc">
+               <font>
+                  <Font name="Roboto Light" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

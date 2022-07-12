@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="500" maxWidth="500" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" spacing="20" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <AnchorPane minHeight="500.0" minWidth="500.0" style="-fx-background-color: FFFFFF;">
+        <children>
+            <ImageView fitHeight="76.0" fitWidth="276.0" layoutX="132.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../img/logo-png.png" />
+                </image></ImageView>
+            <Label layoutX="128.0" layoutY="123.0" text="Registo Contratempo na Produção" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <Button layoutX="432.0" layoutY="461.0" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Logout" textFill="#fcfcfc">
+                <font>
+                    <Font name="Roboto Light" size="12.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+            <Button layoutX="14.0" layoutY="14.0" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Voltar Atrás" textFill="#fcfcfc">
+                <font>
+                    <Font name="Roboto Light" size="12.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+            <Button layoutX="164.0" layoutY="429.0" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Registo Contratempo" textFill="#fcfcfc">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+            <Label layoutX="135.0" layoutY="190.0" text="Contratempo:" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <Label layoutX="181.0" layoutY="225.0" text="Descrição:" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <Label layoutX="261.0" layoutY="222.0" style="-fx-background-color: #FFF9EB; -fx-border-color: #9F6B41; -fx-padding: 2px;" text="Descrição" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <ComboBox layoutX="261.0" layoutY="270.0" prefHeight="27.0" prefWidth="104.0" promptText="Gravidade" style="-fx-background-color: #FFF9EB; -fx-border-color: #9F6B41;" />
+         <Label layoutX="181.0" layoutY="273.0" text="Gravidade:" textFill="#8a5c3a">
+            <font>
+               <Font name="Roboto Light" size="16.0" />
+            </font>
+         </Label>
+         <Label layoutX="181.0" layoutY="315.0" text="Tempo Paragem:" textFill="#8a5c3a">
+            <font>
+               <Font name="Roboto Light" size="16.0" />
+            </font>
+         </Label>
+         <Spinner layoutX="311.0" layoutY="314.0" prefHeight="25.0" prefWidth="54.0" />
+        </children>
+    </AnchorPane>
+</VBox>

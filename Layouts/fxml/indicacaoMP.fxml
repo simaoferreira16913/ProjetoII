@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="500" maxWidth="500" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" spacing="20" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <AnchorPane minHeight="500.0" minWidth="500.0" style="-fx-background-color: FFFFFF;">
+        <children>
+            <Button layoutX="176.0" layoutY="429.0" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Registo Utilização" textFill="#fcfcfc">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor></Button>
+            <ImageView fitHeight="140.0" fitWidth="305.0" layoutX="99.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../img/logo-png.png" />
+                </image></ImageView>
+            <Label layoutX="121.0" layoutY="160.0" text="Indicação de Matéria-prima Utilizada" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <Button layoutX="432.0" layoutY="461.0" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Logout" textFill="#fcfcfc">
+                <font>
+                    <Font name="Roboto Light" size="12.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+            <Button layoutX="14.0" layoutY="14.0" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Voltar Atrás" textFill="#fcfcfc">
+                <font>
+                    <Font name="Roboto Light" size="12.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+            <Label layoutX="99.0" layoutY="195.0" text="Matéria-prima:" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <Label layoutX="145.0" layoutY="230.0" text="Leite" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <Label layoutX="144.0" layoutY="275.0" text="Sal" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <Label layoutX="145.0" layoutY="320.0" text="Alho" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <Label layoutX="145.0" layoutY="365.0" text="Embalagens" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <Spinner layoutX="298.0" layoutY="230.0" prefHeight="25.0" prefWidth="59.0" />
+            <Spinner layoutX="298.0" layoutY="275.0" prefHeight="25.0" prefWidth="59.0" />
+            <Spinner layoutX="298.0" layoutY="320.0" prefHeight="25.0" prefWidth="59.0" />
+            <Spinner layoutX="298.0" layoutY="365.0" prefHeight="25.0" prefWidth="59.0" />
+        </children>
+    </AnchorPane>
+</VBox>

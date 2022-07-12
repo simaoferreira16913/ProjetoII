@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="500" maxWidth="500" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" spacing="20" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <AnchorPane minHeight="500.0" minWidth="500.0" style="-fx-background-color: FFFFFF;">
+        <children>
+            <Button layoutX="172.0" layoutY="429.0" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Registar Encomenda" textFill="#fcfcfc">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor></Button>
+            <ImageView fitHeight="105.0" fitWidth="284.0" layoutX="108.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../img/logo-png.png" />
+                </image></ImageView>
+            <Label layoutX="143.0" layoutY="125.0" text="Registo Encomenda Fornecedor" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <Button layoutX="14.0" layoutY="14.0" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Voltar Atrás" textFill="#fcfcfc">
+                <font>
+                    <Font name="Roboto Light" size="12.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+            <Label layoutX="120.0" layoutY="164.0" text="Matéria-prima:" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <ComboBox layoutX="166.0" layoutY="199.0" prefWidth="150.0" promptText="Matéria-prima" style="-fx-background-color: #FFF9EB; -fx-border-color: #9F6B41;" />
+            <Spinner layoutX="321.0" layoutY="200.0" prefHeight="25.0" prefWidth="59.0" />
+            <Label layoutX="120.0" layoutY="319.0" text="Data Pagamento:" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <Label layoutX="247.0" layoutY="316.0" style="-fx-background-color: #FFF9EB; -fx-border-color: #9F6B41; -fx-padding: 2px;" text="01-01-22; 15:45" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <Label layoutX="120.0" layoutY="362.0" text="Valor Final:" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <Label layoutX="206.0" layoutY="359.0" style="-fx-background-color: #FFF9EB; -fx-border-color: #9F6B41; -fx-padding: 2px;" text="111€" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <Label layoutX="277.0" layoutY="362.0" text="IVA:" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <Label layoutX="317.0" layoutY="359.0" style="-fx-background-color: #FFF9EB; -fx-border-color: #9F6B41; -fx-padding: 2px;" text="23%" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+         <Button layoutX="432.0" layoutY="461.0" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Logout" textFill="#fcfcfc">
+            <font>
+               <Font name="Roboto Light" size="12.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+         <Label layoutX="120.0" layoutY="239.0" text="Fornecedor:" textFill="#8a5c3a">
+            <font>
+               <Font name="Roboto Light" size="16.0" />
+            </font>
+         </Label>
+         <ComboBox layoutX="166.0" layoutY="274.0" prefWidth="150.0" promptText="Fornecedor" style="-fx-background-color: #FFF9EB; -fx-border-color: #9F6B41;" />
+        </children>
+    </AnchorPane>
+</VBox>
