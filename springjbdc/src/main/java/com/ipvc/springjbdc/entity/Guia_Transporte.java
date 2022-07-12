@@ -3,10 +3,22 @@ package com.ipvc.springjbdc.entity;
 public class Guia_Transporte {
     private int id_guia;
     private String matricula;
-    private String rua;
-    private int porta;
-    private String cp;
-    private int id_fatura;
+    String data_pagamento;
+    float valor;
+    int id_cliente;
+    int id_encomenda;
+
+    @Override
+    public String toString() {
+        return "Guia_Transporte{" +
+                "id_guia=" + id_guia +
+                ", matricula='" + matricula + '\'' +
+                ", data_pagamento='" + data_pagamento + '\'' +
+                ", valor=" + valor +
+                ", id_cliente=" + id_cliente +
+                ", id_encomenda=" + id_encomenda +
+                '}';
+    }
 
     public int getId_guia() {
         return id_guia;
@@ -24,47 +36,35 @@ public class Guia_Transporte {
         this.matricula = matricula;
     }
 
-    public String getRua() {
-        return rua;
+    public String getData_pagamento() {
+        return data_pagamento;
     }
 
-    public void setRua(String rua) {
-        this.rua = rua;
+    public void setData_pagamento(String data_pagamento) {
+        this.data_pagamento = data_pagamento;
     }
 
-    public int getPorta() {
-        return porta;
+    public float getValor() {
+        return valor;
     }
 
-    public void setPorta(int porta) {
-        this.porta = porta;
+    public void setValor(float valor) {
+        this.valor = valor;
     }
 
-    public String getCp() {
-        return cp;
+    public int getId_cliente() {
+        return id_cliente;
     }
 
-    public void setCp(String cp) {
-        this.cp = cp;
+    public void setId_cliente(int id_cliente) {
+        this.id_cliente = id_cliente;
     }
 
-    public int getId_fatura() {
-        return id_fatura;
+    public int getId_encomenda() {
+        return id_encomenda;
     }
 
-    public void setId_fatura(int id_fatura) {
-        this.id_fatura = id_fatura;
-    }
-
-    @Override
-    public String toString() {
-        return "Guia_Transporte{" +
-                "id_guia=" + id_guia +
-                ", matricula='" + matricula + '\'' +
-                ", rua='" + rua + '\'' +
-                ", porta=" + porta +
-                ", cp='" + cp + '\'' +
-                ", id_fatura=" + id_fatura +
-                '}';
+    public void setId_encomenda(int id_encomenda) {
+        this.id_encomenda = id_encomenda;
     }
 }

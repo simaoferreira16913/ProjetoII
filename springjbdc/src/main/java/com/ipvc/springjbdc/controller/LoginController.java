@@ -41,33 +41,46 @@ public class LoginController  {
         try {
             con= DBUTIL.getConnection();
             con.createStatement();
-            String sql = "select * from Users where email=? and password=?";
+            String sql = "select * from Funcionario where email=? and password=?";
             pstmt = con.prepareStatement(sql);
             pstmt.setString(1,email.getText());
             pstmt.setString(2, password.getText());
             rs = pstmt.executeQuery();
             System.out.println(rs);
             if(rs.next()) {
-                int idLog = rs.getInt("id");
-                PreparedStatement pst2 = con.prepareStatement("SELECT full_name from Users WHERE id = ?");
+                int idLog = rs.getInt("id_func");
+                PreparedStatement pst2 = con.prepareStatement("SELECT cargo from Funcionario WHERE id_func = ?");
                 pst2.setInt(1,idLog);
 
                 ResultSet rs1 = pst2.executeQuery();
 
                 if(rs1.next()){
                     System.out.println("Login Com Sucesso");
+                    String cargo = rs1.getString("cargo");
 
-                    String nomeFunc = rs1.getString("full_name");
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/dashboard.fxml"));
-                    Parent root = loader.load();
-                    Stage stage = new Stage();
-                    stage.setTitle("Dashboard");
-                    stage.setScene(new Scene(root));
-                    stage.setResizable(false);
-                    stage.show();
-                    DashboardController dashboard = loader.getController();
-                    dashboard.iniciar(nomeFunc);
-                    closeLogin(btnLogin);
+
+                    if (cargo.equals("Encarregado de Armazém")){
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/dashboard.fxml"));
+                        Parent root = loader.load();
+                        Stage stage = new Stage();
+                        stage.setTitle("Dashboard");
+                        stage.setScene(new Scene(root));
+                        stage.setResizable(false);
+                        stage.show();
+                        DashboardController dashboard = loader.getController();
+                        dashboard.iniciar(cargo);
+                        closeLogin(btnLogin);
+                    }
+                    if(cargo.equals("Encarregado de Producao")){
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/producao.fxml"));
+                        Parent root = loader.load();
+                        Stage stage = new Stage();
+                        stage.setTitle("Encarregado de Producao");
+                        stage.setScene(new Scene(root));
+                        stage.setResizable(false);
+                        stage.show();
+                        closeLogin(btnLogin);
+                    }
                 }
             }else{
                 lebel.setText("Login Not Sucessfully!");
@@ -76,8 +89,7 @@ public class LoginController  {
             e.printStackTrace();
         }
     }
-    public void closeLogin(Button btn) throws FileNotFoundException, ParseException
-    {
+    public void closeLogin(Button btn) {
         Stage stage = (Stage) btn.getScene().getWindow();
         stage.close();
     }

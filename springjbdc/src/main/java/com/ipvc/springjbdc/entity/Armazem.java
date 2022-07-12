@@ -1,10 +1,31 @@
 package com.ipvc.springjbdc.entity;
 
 public class Armazem {
-    private int id_armazem;
-    private String tipo_materia;
-    private int qt_materia;
-    private String data_validade;
+    int id_armazem;
+    int qt_leite;
+    int qt_sal;
+    int qt_alho;
+    int qt_embalagens;
+
+    public Armazem(int id_armazem, int qt_leite, int qt_sal, int qt_alho, int qt_embalagens) {
+        this.id_armazem = id_armazem;
+        this.qt_leite = qt_leite;
+        this.qt_sal = qt_sal;
+        this.qt_alho = qt_alho;
+        this.qt_embalagens = qt_embalagens;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Armazem{" +
+                "id_armazem=" + id_armazem +
+                ", qt_leite=" + qt_leite +
+                ", qt_sal=" + qt_sal +
+                ", qt_alho=" + qt_alho +
+                ", qt_embalagens=" + qt_embalagens +
+                '}';
+    }
 
     public int getId_armazem() {
         return id_armazem;
@@ -14,37 +35,35 @@ public class Armazem {
         this.id_armazem = id_armazem;
     }
 
-    public String getTipo_materia() {
-        return tipo_materia;
+    public int getQt_leite() {
+        return qt_leite;
     }
 
-    public void setTipo_materia(String tipo_materia) {
-        this.tipo_materia = tipo_materia;
+    public void setQt_leite(int qt_leite) {
+        this.qt_leite = qt_leite;
     }
 
-    public int getQt_materia() {
-        return qt_materia;
+    public int getQt_sal() {
+        return qt_sal;
     }
 
-    public void setQt_materia(int qt_materia) {
-        this.qt_materia = qt_materia;
+    public void setQt_sal(int qt_sal) {
+        this.qt_sal = qt_sal;
     }
 
-    public String getData_validade() {
-        return data_validade;
+    public int getQt_alho() {
+        return qt_alho;
     }
 
-    public void setData_validade(String data_validade) {
-        this.data_validade = data_validade;
+    public void setQt_alho(int qt_alho) {
+        this.qt_alho = qt_alho;
     }
 
-    @Override
-    public String toString() {
-        return "Armazem{" +
-                "id_armazem=" + id_armazem +
-                ", tipo_materia='" + tipo_materia + '\'' +
-                ", qt_materia=" + qt_materia +
-                ", data_validade='" + data_validade + '\'' +
-                '}';
+    public int getQt_embalagens() {
+        return qt_embalagens;
+    }
+
+    public void setQt_embalagens(int qt_embalagens) {
+        this.qt_embalagens = qt_embalagens;
     }
 }

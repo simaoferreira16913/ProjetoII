@@ -4,6 +4,24 @@ public class Cliente {
     private int id_cliente;
     private  String Nome;
     private int NIF;
+    String email;
+    String telemovel;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTelemovel() {
+        return telemovel;
+    }
+
+    public void setTelemovel(String telemovel) {
+        this.telemovel = telemovel;
+    }
 
     public int getId_cliente() {
         return id_cliente;
@@ -35,6 +53,8 @@ public class Cliente {
                 "id_cliente=" + id_cliente +
                 ", Nome='" + Nome + '\'' +
                 ", NIF=" + NIF +
+                ", email='" + email + '\'' +
+                ", telemovel='" + telemovel + '\'' +
                 '}';
     }
 }

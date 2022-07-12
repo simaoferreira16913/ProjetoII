@@ -2,13 +2,12 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipvc.springjbdc.controller.DashboardController">
    <children>
       <Label fx:id="teste" layoutX="115.0" layoutY="14.0" prefHeight="32.0" prefWidth="401.0" textFill="#fc0000" />
-      <Circle fill="DODGERBLUE" layoutX="300.0" layoutY="200.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
-      <AnchorPane layoutX="200.0" layoutY="-45.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button fx:id="btnLogout" layoutX="274.0" layoutY="337.0" mnemonicParsing="false" text="Button" onAction="#Logout" />
+      <Button fx:id="btnLogout" layoutX="273.0" layoutY="343.0" mnemonicParsing="false" onAction="#Logout" text="Logout" />
+      <Button fx:id="btnStock" layoutX="58.0" layoutY="46.0" mnemonicParsing="false" onAction="#chkStock" text="Consultar Stock" />
+      <Button fx:id="btnMateriasPrimas" layoutX="58.0" layoutY="88.0" mnemonicParsing="false" onAction="#encomendaForn" text="Encomendar Materias Primas" />
    </children>
 </AnchorPane>

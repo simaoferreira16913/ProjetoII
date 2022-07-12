@@ -1,12 +1,21 @@
 package com.ipvc.springjbdc.entity;
 
 public class Users {
-    private int id;
+    private static int id;
     private String full_name;
     private String email;
     private String password;
+    private int role;
 
-    public int getId() {
+    public int getRole() {
+        return role;
+    }
+
+    public void setRole(int role) {
+        this.role = role;
+    }
+
+    public static int getId() {
         return id;
     }
 
@@ -45,6 +54,7 @@ public class Users {
                 ", full_name='" + full_name + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
+                ", role=" + role +
                 '}';
     }
 }

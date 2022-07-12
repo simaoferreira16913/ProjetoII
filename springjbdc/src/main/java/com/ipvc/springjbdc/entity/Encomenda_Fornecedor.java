@@ -4,9 +4,25 @@ public class Encomenda_Fornecedor {
     private int id_encomenda_f;
     private String tipo_materia;
     private int qt_materia;
-    private String data_inicio;
-    private String data_fim;
-    private int id_Func;
+    private String data;
+    float valor;
+    float iva;
+    int id_fornecedor;
+    int id_armazem;
+
+    @Override
+    public String toString() {
+        return "Encomenda_Fornecedor{" +
+                "id_encomenda_f=" + id_encomenda_f +
+                ", tipo_materia='" + tipo_materia + '\'' +
+                ", qt_materia=" + qt_materia +
+                ", data='" + data + '\'' +
+                ", valor=" + valor +
+                ", iva=" + iva +
+                ", id_fornecedor=" + id_fornecedor +
+                ", id_armazem=" + id_armazem +
+                '}';
+    }
 
     public int getId_encomenda_f() {
         return id_encomenda_f;
@@ -32,39 +48,43 @@ public class Encomenda_Fornecedor {
         this.qt_materia = qt_materia;
     }
 
-    public String getData_inicio() {
-        return data_inicio;
+    public String getData() {
+        return data;
     }
 
-    public void setData_inicio(String data_inicio) {
-        this.data_inicio = data_inicio;
+    public void setData(String data) {
+        this.data = data;
     }
 
-    public String getData_fim() {
-        return data_fim;
+    public float getValor() {
+        return valor;
     }
 
-    public void setData_fim(String data_fim) {
-        this.data_fim = data_fim;
+    public void setValor(float valor) {
+        this.valor = valor;
     }
 
-    public int getId_Func() {
-        return id_Func;
+    public float getIva() {
+        return iva;
     }
 
-    public void setId_Func(int id_Func) {
-        this.id_Func = id_Func;
+    public void setIva(float iva) {
+        this.iva = iva;
     }
 
-    @Override
-    public String toString() {
-        return "Encomenda_Fornecedor{" +
-                "id_encomenda_f=" + id_encomenda_f +
-                ", tipo_materia='" + tipo_materia + '\'' +
-                ", qt_materia=" + qt_materia +
-                ", data_inicio='" + data_inicio + '\'' +
-                ", data_fim='" + data_fim + '\'' +
-                ", id_Func=" + id_Func +
-                '}';
+    public int getId_fornecedor() {
+        return id_fornecedor;
+    }
+
+    public void setId_fornecedor(int id_fornecedor) {
+        this.id_fornecedor = id_fornecedor;
+    }
+
+    public int getId_armazem() {
+        return id_armazem;
+    }
+
+    public void setId_armazem(int id_armazem) {
+        this.id_armazem = id_armazem;
     }
 }

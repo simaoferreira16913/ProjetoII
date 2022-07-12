@@ -5,8 +5,6 @@ public class Encomenda_Cliente {
     private int qt_tipo_sal;
     private int qt_tipo_sem;
     private int qt_tipo_alho;
-    private String data_inicio;
-    private String data_fim;
     private int id_cliente;
 
     public int getId_encomenda_c() {
@@ -41,21 +39,6 @@ public class Encomenda_Cliente {
         this.qt_tipo_alho = qt_tipo_alho;
     }
 
-    public String getData_inicio() {
-        return data_inicio;
-    }
-
-    public void setData_inicio(String data_inicio) {
-        this.data_inicio = data_inicio;
-    }
-
-    public String getData_fim() {
-        return data_fim;
-    }
-
-    public void setData_fim(String data_fim) {
-        this.data_fim = data_fim;
-    }
 
     public int getId_cliente() {
         return id_cliente;
@@ -72,8 +55,6 @@ public class Encomenda_Cliente {
                 ", qt_tipo_sal=" + qt_tipo_sal +
                 ", qt_tipo_sem=" + qt_tipo_sem +
                 ", qt_tipo_alho=" + qt_tipo_alho +
-                ", data_inicio='" + data_inicio + '\'' +
-                ", data_fim='" + data_fim + '\'' +
                 ", id_cliente=" + id_cliente +
                 '}';
     }
