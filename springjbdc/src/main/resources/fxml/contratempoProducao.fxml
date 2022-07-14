@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="500" maxWidth="500" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" spacing="20" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipvc.springjbdc.controller.ContratempoController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <AnchorPane minHeight="500.0" minWidth="500.0" style="-fx-background-color: FFFFFF;">
+        <children>
+            <ImageView fitHeight="76.0" fitWidth="276.0" layoutX="132.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@/img/logo-png.png" />
+                </image></ImageView>
+            <Label layoutX="128.0" layoutY="123.0" text="Registo Contratempo na Produção" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <Button fx:id="btnVoltar" layoutX="14.0" layoutY="14.0" onAction="#Voltar" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Voltar Atrás" textFill="#fcfcfc">
+                <font>
+                    <Font name="Roboto Light" size="12.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+            <Button fx:id="btnRegCont" layoutX="164.0" layoutY="429.0" onAction="#regCont" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Registo Contratempo" textFill="#fcfcfc">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+            <Label layoutX="135.0" layoutY="190.0" text="Contratempo:" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <Label fx:id="descricao" layoutX="132.0" layoutY="222.0" text="Descrição:" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <ComboBox fx:id="cmbGravidade" layoutX="212.0" layoutY="320.0" prefHeight="27.0" prefWidth="165.0" promptText="Gravidade" style="-fx-background-color: #FFF9EB; -fx-border-color: #9F6B41;" />
+         <Label layoutX="132.0" layoutY="323.0" text="Gravidade:" textFill="#8a5c3a">
+            <font>
+               <Font name="Roboto Light" size="16.0" />
+            </font>
+         </Label>
+         <Label layoutX="132.0" layoutY="365.0" text="Tempo Paragem:" textFill="#8a5c3a">
+            <font>
+               <Font name="Roboto Light" size="16.0" />
+            </font>
+         </Label>
+         <TextArea fx:id="txDesc" layoutX="132.0" layoutY="244.0" prefHeight="67.0" prefWidth="244.0" promptText="Faça um resumo do problema" />
+         <TextField fx:id="txTmp" layoutX="261.0" layoutY="364.0" prefHeight="25.0" prefWidth="91.0" promptText="em minutos" />
+        </children>
+    </AnchorPane>
+</VBox>

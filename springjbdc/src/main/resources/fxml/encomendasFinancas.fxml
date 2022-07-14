@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipvc.springjbdc.controller.EncomendasFinancasController">
+    <children>
+        <AnchorPane prefHeight="500.0" prefWidth="500.0">
+            <children>
+                <ImageView fitHeight="140.0" fitWidth="305.0" layoutX="98.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/img/logo-png.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="166.0" layoutY="145.0" text="Encomendas - Finanças" textFill="#8a5c3a">
+                    <font>
+                        <Font name="Roboto Light" size="16.0" />
+                    </font>
+                </Label>
+                <Button fx:id="btnVoltar" layoutX="197.0" layoutY="429.0" onAction="#Voltar" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Voltar Atrás" textFill="#fcfcfc">
+                    <font>
+                        <Font name="Roboto Light" size="16.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            <TableView fx:id="tblEnc" layoutX="13.0" layoutY="201.0" prefHeight="200.0" prefWidth="475.0" style="-fx-background-color: #FFF9EB;">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="sSal" prefWidth="75.0" text="s/Sal" />
+                  <TableColumn fx:id="cSal" prefWidth="75.0" text="c/Sal" />
+                  <TableColumn fx:id="cAlho" prefWidth="75.0" text="c/Alho" />
+                  <TableColumn fx:id="cliente" prefWidth="75.0" text="Cliente" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

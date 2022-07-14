@@ -2,10 +2,22 @@ package com.ipvc.springjbdc.entity;
 
 public class Cliente {
     private int id_cliente;
-    private  String Nome;
-    private int NIF;
+    public  String nome;
+    private int nif;
     String email;
     String telemovel;
+
+    public Cliente(String nome) {
+        this.nome = nome;
+    }
+
+    public Cliente(int id_cliente, String nome, int nif, String email, String telemovel) {
+        this.id_cliente = id_cliente;
+        this.nome = nome;
+        this.nif = nif;
+        this.email = email;
+        this.telemovel = telemovel;
+    }
 
     public String getEmail() {
         return email;
@@ -32,27 +44,27 @@ public class Cliente {
     }
 
     public String getNome() {
-        return Nome;
+        return nome;
     }
 
     public void setNome(String nome) {
-        Nome = nome;
+        this.nome = nome;
     }
 
-    public int getNIF() {
-        return NIF;
+    public int getNif() {
+        return nif;
     }
 
-    public void setNIF(int NIF) {
-        this.NIF = NIF;
+    public void setNif(int nif) {
+        this.nif = nif;
     }
 
     @Override
     public String toString() {
         return "Cliente{" +
                 "id_cliente=" + id_cliente +
-                ", Nome='" + Nome + '\'' +
-                ", NIF=" + NIF +
+                ", Nome='" + nome + '\'' +
+                ", NIF=" + nif +
                 ", email='" + email + '\'' +
                 ", telemovel='" + telemovel + '\'' +
                 '}';

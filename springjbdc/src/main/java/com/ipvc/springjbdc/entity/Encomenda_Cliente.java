@@ -1,11 +1,23 @@
 package com.ipvc.springjbdc.entity;
 
 public class Encomenda_Cliente {
-    private int id_encomenda_c;
-    private int qt_tipo_sal;
-    private int qt_tipo_sem;
-    private int qt_tipo_alho;
-    private int id_cliente;
+    public int id_encomenda_c;
+    public int qt_tipo_sal;
+    public int qt_tipo_sem;
+    public int qt_tipo_alho;
+    public String nome;
+
+    public Encomenda_Cliente(int id_encomenda_c) {
+        this.id_encomenda_c = id_encomenda_c;
+    }
+
+    public Encomenda_Cliente(int id_encomenda_c, int qt_tipo_sal, int qt_tipo_sem, int qt_tipo_alho, String nome) {
+        this.id_encomenda_c = id_encomenda_c;
+        this.qt_tipo_sal = qt_tipo_sal;
+        this.qt_tipo_sem = qt_tipo_sem;
+        this.qt_tipo_alho = qt_tipo_alho;
+        this.nome = nome;
+    }
 
     public int getId_encomenda_c() {
         return id_encomenda_c;
@@ -40,12 +52,12 @@ public class Encomenda_Cliente {
     }
 
 
-    public int getId_cliente() {
-        return id_cliente;
+    public String getNome() {
+        return nome;
     }
 
-    public void setId_cliente(int id_cliente) {
-        this.id_cliente = id_cliente;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     @Override
@@ -55,7 +67,7 @@ public class Encomenda_Cliente {
                 ", qt_tipo_sal=" + qt_tipo_sal +
                 ", qt_tipo_sem=" + qt_tipo_sem +
                 ", qt_tipo_alho=" + qt_tipo_alho +
-                ", id_cliente=" + id_cliente +
+                ", id_cliente=" + nome +
                 '}';
     }
 }

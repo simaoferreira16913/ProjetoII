@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="500" maxWidth="500" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" spacing="20" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipvc.springjbdc.controller.EncomendaFornecedorController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <AnchorPane minHeight="500.0" minWidth="500.0" style="-fx-background-color: FFFFFF;">
+        <children>
+            <Button fx:id="btnEncomendar" layoutX="172.0" layoutY="429.0" onAction="#encomendar" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Registar Encomenda" textFill="#fcfcfc">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor></Button>
+            <ImageView fitHeight="105.0" fitWidth="284.0" layoutX="108.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@/img/logo-png.png" />
+                </image></ImageView>
+            <Label layoutX="143.0" layoutY="125.0" text="Registo Encomenda Fornecedor" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <Button fx:id="btnVoltar" layoutX="14.0" layoutY="14.0" onAction="#voltar" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Voltar Atrás" textFill="#fcfcfc">
+                <font>
+                    <Font name="Roboto Light" size="12.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+            <Label layoutX="120.0" layoutY="164.0" text="Matéria-prima:" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <ComboBox fx:id="cbTipo" layoutX="166.0" layoutY="199.0" prefWidth="150.0" promptText="Matéria-prima" style="-fx-background-color: #FFF9EB; -fx-border-color: #9F6B41;" />
+         <Label layoutX="120.0" layoutY="239.0" text="Fornecedor:" textFill="#8a5c3a">
+            <font>
+               <Font name="Roboto Light" size="16.0" />
+            </font>
+         </Label>
+         <ComboBox fx:id="cbForn" layoutX="166.0" layoutY="274.0" prefWidth="150.0" promptText="Fornecedor" style="-fx-background-color: #FFF9EB; -fx-border-color: #9F6B41;" />
+         <TextField fx:id="qtd" layoutX="167.0" layoutY="352.0" promptText="Quantidade" />
+         <Label layoutX="124.0" layoutY="321.0" text="Quantidade" textFill="#8a5c3a">
+            <font>
+               <Font name="Roboto Light" size="16.0" />
+            </font>
+         </Label>
+        </children>
+    </AnchorPane>
+</VBox>

@@ -5,8 +5,9 @@
  */
 package com.ipvc.springjbdc.util;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.*;
+
+import com.ipvc.springjbdc.util.DBUTIL;
 
 
 public class Util {

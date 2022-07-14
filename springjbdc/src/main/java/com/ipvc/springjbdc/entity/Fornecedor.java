@@ -8,6 +8,15 @@ public class Fornecedor {
     String email;
     String telemovel;
 
+    public Fornecedor(int id_fornecedor, String nome, String cp, String morada, String email, String telemovel) {
+        this.id_fornecedor = id_fornecedor;
+        this.nome = nome;
+        this.cp = cp;
+        this.morada = morada;
+        this.email = email;
+        this.telemovel = telemovel;
+    }
+
     @Override
     public String toString() {
         return "Fornecedor{" +

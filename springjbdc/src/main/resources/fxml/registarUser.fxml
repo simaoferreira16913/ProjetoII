@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="500" maxWidth="500" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" spacing="20" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipvc.springjbdc.controller.RegistarUserController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <AnchorPane minHeight="500.0" minWidth="500.0" style="-fx-background-color: FFFFFF;">
+        <children>
+            <Button fx:id="btnRegistar" layoutX="190.0" layoutY="412.0" onAction="#Registar" prefHeight="34.0" prefWidth="122.0" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Registar" textFill="#fcfcfc">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor></Button>
+            <PasswordField fx:id="txPassword" layoutX="151.0" layoutY="310.0" prefWidth="200.0" promptText="Password" style="-fx-border-color: #9F6B41; -fx-background-color: #FFF9EB;">
+                <font>
+                    <Font name="Roboto Light" size="12.0" />
+                </font></PasswordField>
+            <TextField fx:id="txEmail" layoutX="151.0" layoutY="265.0" prefHeight="25.0" prefWidth="200.0" promptText="E-mail" style="-fx-background-color: #FFF9EB; -fx-border-color: #9F6B41;">
+                <font>
+                    <Font name="Roboto Light" size="12.0" />
+                </font></TextField>
+            <ImageView fitHeight="140.0" fitWidth="305.0" layoutX="98.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@/img/logo-png.png" />
+                </image></ImageView>
+            <Label layoutX="172.0" layoutY="204.0" text="Registar Funcionário" textFill="#8a5c3a">
+                <font>
+                    <Font name="Roboto Light" size="16.0" />
+                </font>
+            </Label>
+            <Button fx:id="btnAtras" layoutX="14.0" layoutY="14.0" onAction="#Voltar" style="-fx-background-color: #9F6B41; -fx-background-radius: 12px;" text="Voltar Atrás" textFill="#fcfcfc">
+                <font>
+                    <Font name="Roboto Light" size="12.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+         <ComboBox fx:id="cmbCargo" layoutX="151.0" layoutY="356.0" prefHeight="25.0" prefWidth="200.0" promptText="Cargo" />
+        </children>
+    </AnchorPane>
+</VBox>

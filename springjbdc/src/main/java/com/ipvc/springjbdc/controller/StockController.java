@@ -1,15 +1,17 @@
 package com.ipvc.springjbdc.controller;
 
-import com.ipvc.springjbdc.entity.Armazem;
 import com.ipvc.springjbdc.util.DBUTIL;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.Pane;
-import javafx.scene.control.TableColumn;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -19,12 +21,70 @@ import java.util.ResourceBundle;
 
 
 public class StockController implements Initializable {
-    public Pane stock;
-    public TableView <Armazem> tablePlantacoes;
-
-    public ObservableList<Armazem> oblist = FXCollections.observableArrayList();
 
     @FXML
+    public Button btnVoltar;
+    public Label lblLeite;
+    public Label lblSal;
+    public Label lblAlho;
+    public Label lblEmb;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        try {
+            Connection conn = DBUTIL.getConnection();
+
+            PreparedStatement pst = null;
+
+            try{
+                pst = conn.prepareStatement("SELECT * FROM ARMAZEM");
+                ResultSet rs = pst.executeQuery();
+                while (rs.next()){
+                    rs.getInt("id_armazem");
+                    lblLeite.setText(String.valueOf(rs.getInt("qt_leite")));
+                    lblAlho.setText(String.valueOf(rs.getInt("qt_alho")));
+                    lblSal.setText(String.valueOf(rs.getInt("qt_sal")));
+                    lblEmb.setText(String.valueOf(rs.getInt("qt_embalagens")));
+                }
+
+
+            }catch (SQLException throwables){
+                throwables.printStackTrace();
+            }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+    }
+
+        public void startVoltar(Stage stage) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/armazemMenu.fxml"));
+        stage.setTitle("Armazem Menu");
+        Scene scene = new Scene(root,500,500);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    public void Voltar(ActionEvent actionEvent) {
+        Stage stage = (Stage) btnVoltar.getScene().getWindow();
+        stage.close();
+        try{
+            startVoltar(stage);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+}
+
+
+
+    /*
+
+
+     @FXML
     public TableColumn colIdArmazem;
     @FXML
     public TableColumn colLeite;
@@ -34,10 +94,6 @@ public class StockController implements Initializable {
     public TableColumn colAlho;
     @FXML
     public TableColumn colEmb;
-
-    public void iniciar(){
-        System.out.println("Área de consulta de stock");
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
@@ -75,3 +131,4 @@ public class StockController implements Initializable {
 
     }
 }
+*/

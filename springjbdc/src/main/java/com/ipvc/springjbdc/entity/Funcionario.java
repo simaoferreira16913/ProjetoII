@@ -4,7 +4,7 @@ public class Funcionario {
     int id_func;
     String email;
     String password;
-    String cargo;
+    public static String cargo;
 
     @Override
     public String toString() {

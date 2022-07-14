@@ -8,7 +8,24 @@ public class Fatura {
     float valor_base;
     float valor_total;
     int id_cliente;
-    int id_func;
+    public String nome;
+
+    public Fatura(int id_fatura, String metodo_pagamento, String data_pagamento, float valor_total, int id_cliente, String nome) {
+        this.id_fatura = id_fatura;
+        this.metodo_pagamento = metodo_pagamento;
+        this.data_pagamento = data_pagamento;
+        this.valor_total = valor_total;
+        this.id_cliente = id_cliente;
+        this.nome = nome;
+    }
+
+    public int getId_cliente() {
+        return id_cliente;
+    }
+
+    public void setId_cliente(int id_cliente) {
+        this.id_cliente = id_cliente;
+    }
 
     @Override
     public String toString() {
@@ -20,7 +37,7 @@ public class Fatura {
                 ", valor_base=" + valor_base +
                 ", valor_total=" + valor_total +
                 ", id_cliente=" + id_cliente +
-                ", id_func=" + id_func +
+                ", nome='" + nome + '\'' +
                 '}';
     }
 
@@ -72,19 +89,12 @@ public class Fatura {
         this.valor_total = valor_total;
     }
 
-    public int getId_cliente() {
-        return id_cliente;
+    public String getNome() {
+        return nome;
     }
 
-    public void setId_cliente(int id_cliente) {
-        this.id_cliente = id_cliente;
+    public void setNome(String id_cliente) {
+        this.nome = nome;
     }
 
-    public int getId_func() {
-        return id_func;
-    }
-
-    public void setId_func(int id_func) {
-        this.id_func = id_func;
-    }
 }
